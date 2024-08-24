@@ -23,7 +23,7 @@ const navigation = [
 
 
 
-const Sobre = () => {
+export default function Sobre (){
   return (
     <div>
       <div className="flex justify-center py-8 px-4 md:px-0">
@@ -74,4 +74,3 @@ const Sobre = () => {
   );
 }
 
-export default Sobre;

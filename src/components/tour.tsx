@@ -8,7 +8,7 @@ interface TourCardProps {
   details: string;
 }
 
-const TourCard = ({ image, title, description, onClick }: TourCardProps) => {
+export default function TourCard  ({ image, title, description, onClick }: TourCardProps)  {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -33,4 +33,3 @@ const TourCard = ({ image, title, description, onClick }: TourCardProps) => {
   );
 };
 
-export default TourCard;
