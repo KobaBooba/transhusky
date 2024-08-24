@@ -59,11 +59,7 @@ const HomePage = () => {
         </div>
       </div>
       <Footer />
-      <Button 
-        onClick={() => window.location.href = 'https://wa.me/573213141928?text=%C2%A1Hola!%0A%20%20Gracias%20por%20confiar%20en%20nosotros.%20Para%20darte%20una%20cotizaci%C3%B3n%20precisa%20o%20reservar%20tu%20transporte%20privado,%20por%20favor%20completa%20la%20siguiente%20informaci%C3%B3n:%20%20%20%20%0A%20%20%20Destino:%0A%20%20%20Punto%20de%20Recogida:%0A%20%20%20Fecha%20y%20Hora%20de%20Ida:%0A%20%20%20Fecha%20y%20Hora%20de%20Regreso%20(si%20aplica):%0A%20%20%20N%C3%BAmero%20de%20Pasajeros:%0A%0ATranshusky%20%F0%9F%90%BE'}
-        className="text-white bg-slate-500 rounded-md py-3 px-4 w-auto mx-auto">
-        Reserva ya!
-      </Button>
+     
     </div>
   );
 };
