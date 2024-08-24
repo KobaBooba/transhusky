@@ -1,6 +1,7 @@
-import { useState } from 'react';
+// src/components/tour.tsx
+import React from 'react';
 
-interface TourCardProps {
+interface TourComponentProps {
   image: string;
   title: string;
   description: string;
@@ -8,28 +9,19 @@ interface TourCardProps {
   details: string;
 }
 
-export default function TourCard  ({ image, title, description, onClick }: TourCardProps)  {
-  const [isHovered, setIsHovered] = useState(false);
-
+const TourComponent: React.FC<TourComponentProps> = ({ image, title, description, onClick, details }) => {
   return (
     <div
       className="relative w-64 h-80 bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
       onClick={onClick}
     >
       <img src={image} alt={title} className="w-full h-full object-cover" />
-      <div
-        className={`absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent p-4 flex flex-col justify-end transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-70'}`}
-      >
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent p-4 flex flex-col justify-end">
         <h3 className="text-white text-lg font-bold truncate">{title}</h3>
-        {isHovered && (
-          <div className="mt-2 text-white">
-            <p className="text-sm mt-1">{description}</p>
-          </div>
-        )}
+        <p className="text-white text-sm mt-2 truncate">{description}</p>
       </div>
     </div>
   );
 };
 
+export default TourComponent;

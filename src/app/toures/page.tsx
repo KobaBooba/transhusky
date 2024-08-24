@@ -4,7 +4,7 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 import Image from 'next/image';
 import fondo2 from '../../../public/fondo.png';
-import TourCard from '@/components/tour';
+import TourComponent from '@/components/tour';
 import Modal from '@/components/modal';
 
 const tours = [
@@ -46,12 +46,7 @@ const tours = [
   },
 ];
 
-const scrollToTop = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-};
+
 
 export function Toures() {
   const [selectedTour, setSelectedTour] = useState<string | null>(null);
@@ -86,7 +81,7 @@ export function Toures() {
         </div>
         <div className="flex flex-wrap gap-4 p-4 justify-center">
           {tours.map((tour, index) => (
-            <TourCard
+            <TourComponent
               key={index}
               image={tour.image}
               title={tour.title}
