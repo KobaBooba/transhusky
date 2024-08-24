@@ -5,8 +5,8 @@ interface TourComponentProps {
   image: string;
   title: string;
   description: string;
-  onClick: () => void;
   details: string;
+  onClick: () => void;
 }
 
 const TourComponent: React.FC<TourComponentProps> = ({ image, title, description, onClick, details }) => {

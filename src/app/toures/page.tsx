@@ -4,8 +4,8 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 import Image from 'next/image';
 import fondo2 from '../../../public/fondo.png';
-import TourComponent from '@/components/tour';
-import Modal from '@/components/modal';
+import TourComponent from '@/components/tour'; // Asegúrate de que sea un componente cliente
+import Modal from '@/components/modal'; // Asegúrate de que sea un componente cliente
 
 const tours = [
   {
@@ -85,7 +85,7 @@ const Toures: React.FC = () => {
               title={tour.title}
               description={tour.description}
               onClick={() => handleClick(tour.details)}
-              details={''}
+              details=''
             />
           ))}
           <Modal isOpen={!!selectedTour} onClose={handleClose} details={selectedTour || ''} />
