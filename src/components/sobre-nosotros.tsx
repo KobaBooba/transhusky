@@ -21,13 +21,11 @@ const navigation = [
   },
 ];
 
-interface SobreProps {
-  id?: string;
-}
 
-const Sobre: React.FC<SobreProps> = ({ id }) => {
+
+const Sobre = () => {
   return (
-    <div id={id} className='sobre'>
+    <div>
       <div className="flex justify-center py-8 px-4 md:px-0">
         <div className="text-black p-6 rounded-lg shadow-lg max-w-4xl w-full border-emerald-50">
           <div className="flex flex-col md:flex-row items-start text-left">
