@@ -1,4 +1,3 @@
-'use client'
 import * as React from "react"
 import Autoplay from "embla-carousel-autoplay"
 
@@ -23,7 +22,7 @@ const navigation = [
 
 
 
-export default function Sobre (){
+export default function  Sobre (){
   return (
     <div>
       <div className="flex justify-center py-8 px-4 md:px-0">

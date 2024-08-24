@@ -1,4 +1,3 @@
-// src/components/tour.tsx
 import React from 'react';
 
 interface TourComponentProps {

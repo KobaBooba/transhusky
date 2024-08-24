@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import Sobre from '@/components/sobre-nosotros';
 import Servicios from '@/components/servicios';
