@@ -23,7 +23,7 @@ const tours = [
   {
     image: 'https://sharex.host/RggBZB2Fy7.png?key=OhYszYAFG5Q9M4',
     title: 'Catedral de Sal',
-    description: ' Iglesia subterránea en una mina de sal',
+    description: 'Iglesia subterránea en una mina de sal',
     details: 'La Catedral de Sal es un lugar de peregrinación y una maravilla de la ingeniería. Los visitantes pueden explorar sus capillas esculpidas en sal, así como disfrutar de la atmósfera única de este lugar. La catedral también alberga un museo y una serie de esculturas y altares elaborados en sal.',
   },
   {
@@ -40,15 +40,13 @@ const tours = [
   },
   {
     image: 'https://sharex.host/k7rRYNjMhL.jpg?key=EL5W8fqcl83LyN',
-    title: 'Monseratte',
+    title: 'Monserrate',
     description: 'Explora el histórico barrio de Bogotá.',
-    details: 'Información detallada sobre La Candelaria.',
+    details: 'Información detallada sobre Monserrate.',
   },
 ];
 
-
-
-export function Toures() {
+const Toures: React.FC = () => {
   const [selectedTour, setSelectedTour] = useState<string | null>(null);
 
   const handleClick = (details: string) => {
@@ -93,7 +91,6 @@ export function Toures() {
           <Modal isOpen={!!selectedTour} onClose={handleClose} details={selectedTour || ''} />
         </div>
         
-
         <div className="flex-grow"></div>
 
         <Footer />
@@ -110,6 +107,6 @@ export function Toures() {
       </a>
     </div>
   );
-}
+};
 
 export default Toures;
